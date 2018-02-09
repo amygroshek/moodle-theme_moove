@@ -3,6 +3,10 @@ body {
     background-color: $m-dark-bg;
 }
 
+body#page-mod-scorm-player {
+    margin-left: 0px;
+}
+
 #page {
     background-color: $m-dark-bg-hover;
     margin-top: 70px;
@@ -46,6 +50,10 @@ h1,
         .card-block {
             padding-bottom: 0;
         }
+    }
+
+    .col-xs-12.p-a-1 {
+        padding: 1rem 1rem 0 1rem !important;
     }
 
     .breadcrumb-button.nonavbar,
