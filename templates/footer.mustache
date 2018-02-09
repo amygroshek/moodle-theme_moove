@@ -25,7 +25,11 @@
     <div class="row">
         <div class="col-md-7 contact">
             <h2>{{#str}}stayintouch, theme_moove{{/str}}</h2>
-            <h3>{{output.get_getintouchcontent_config}}</h3>
+            <p>Address: 555 12th St, NW 630A<br>
+                Washington, DC 20004<br>
+                Phone number: (888) 995-WCAG<br>
+                International number: 1(888) 995-9224<br>
+                Email: accessibility@user1st.com</p>
             <ul>
                 {{#output.get_website_config}}<li><i class="fa fa-globe"></i>{{output.get_website_config}}</li>{{/output.get_website_config}}
                 {{#output.get_mobile_config}}<li><i class="fa fa-mobile-phone"></i>{{output.get_mobile_config}}</li>{{/output.get_mobile_config}}
@@ -76,24 +80,17 @@
           </ul>
         </div>
     </div>
+    <div class="row">
+        <span class="copyright-notice"> ©2017 User1st </span>
+        <span class="image-wrap">
+            <img src="/wp-content/uploads/2017/02/User1st_Logo_Footer.png" alt="">
+        </span>
+    </div>
 </div>
 
 <footer id="page-footer" class="p-y-1">
     <div class="container">
         <div id="course-footer">{{{ output.course_footer }}}</div>
-
-        {{# output.page_doc_link }}
-            <p class="helplink">{{{ output.page_doc_link }}}</p>
-        {{/ output.page_doc_link }}
-
-        <div class="madewithmoodle">
-            <p>{{#str}}madewitmoodle, theme_moove{{/str}}</p>
-            <a href="https://moodle.org"><img src="{{output.get_pix_image_url_base}}/moodle-logo-white.png" alt="Moodle logo"></a>
-        </div>
-
-        <div class="madeby">
-            <p>{{#str}}madeby, theme_moove{{/str}} <a href="http://conecti.me">conecti.me</a></p>
-        </div>
 
         <nav class="nav navbar-nav hidden-lg-up">
             {{# output.custom_menu_flat }}
