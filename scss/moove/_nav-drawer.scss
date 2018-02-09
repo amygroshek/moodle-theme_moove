@@ -51,7 +51,7 @@
 
             &:hover {
                 background-color: $user1stverydarkblue;// $m-dark-bg-hover;
-                color: $m-dark-bg-hover;// $m-dark-bg;
+                color: $user1stlightblue;//$m-dark-bg-hover;// $m-dark-bg;
             }
         }
 
@@ -66,9 +66,11 @@
         }
 
         .list-group-item.font-weight-bold {
-            background-color: $m-dark-bg-hover;
+            // background-color: $m-dark-bg-hover;
             border-left: 3px solid $brand-primary;
-            color: $m-dark-bg;
+            // color: $m-dark-bg;
+            background-color: $user1stverydarkblue;// $m-dark-bg-hover;
+            color: $user1stlightblue;//$m-dark-bg-hover;// $m-dark-bg;
         }
 
         [data-key="coursehome"] > div:before {
