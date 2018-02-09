@@ -48,6 +48,14 @@
             color: $user1stlightblue;
         }
     }
+
+    .row.copy {
+        padding-top: 1.5rem;
+
+        .image-wrap {
+            float: right;
+        }
+    }
 }
 
 #page-footer {
