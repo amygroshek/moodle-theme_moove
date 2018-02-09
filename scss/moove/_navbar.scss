@@ -51,7 +51,7 @@
                     margin-right: 5px;
 
                     &:hover {
-                        background-color: $user1user1stlightblue; // $brand-primary;
+                        background-color: $user1stlightblue; // $brand-primary;
 
                         .popover-region-toggle,
                         .lang-menu .nav-link {
@@ -106,11 +106,11 @@
                 }
 
                 li.usermenu {
-                    padding: 20px .75rem 0 10px; // 20px 5px 0 10px;
+                    padding: 20px 5px 0 10px;
                     height: 70px;
 
                     &:hover {
-                        background-color: $user1user1stlightblue; // $brand-primary;
+                        background-color: $user1stlightblue; // $brand-primary;
 
                         a.dropdown-toggle {
                             color: #fff;
