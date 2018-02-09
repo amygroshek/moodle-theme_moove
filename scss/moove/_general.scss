@@ -46,15 +46,14 @@ h1,
 
 #page-header {
     .col-xs-12 .card {
-        margin-bottom: 0;
-        border-bottom: 0;
+        // margin-bottom: 0;
+        // border-bottom: 0;
+        background: transparent;
+        border: none;
+        margin-bottom: 1.5rem;
         .card-block {
             padding-bottom: 0;
         }
-    }
-
-    .col-xs-12.p-a-1 {
-        padding: 1rem 1rem 0 1rem !important;
     }
 
     .breadcrumb-button.nonavbar,
