@@ -205,3 +205,17 @@
         }
     }
 }
+
+// SCORM player styling
+body#page-mod-scorm-player {
+    overflow-y: hidden;
+
+    #page {
+        background-color: white;
+
+        #scormpage #scorm_object {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
