@@ -5,20 +5,22 @@
 Moodle "user1st" theme repository
 ===============================
 
+Maintained by Amy Groshek for [User1st](http://user1st.com/ "User first").
+
 ![screenshot](pix/screenshot.jpg "user1st Screenshot")
 
 ---------
 
-user1st is Moodle's theme that makes online environments more clean and intuitive for learners and educators. Its intuitive layout is optimised for online learning, focusing on the things that matter - your learning activities and content.
+User1st is based on Moove. Moove is Moodle's theme that makes online environments more clean and intuitive for learners and educators. Its intuitive layout is optimised for online learning, focusing on the things that matter - your learning activities and content.
 
-user1ste is built on Boostrap4 and Mustache templates.
+Moove is built on Boostrap4 and Mustache templates.
 
 Documentation
 =============
 
-You can see the theme documentation on: https://github.com/willianmano/moodle-theme_user1st/wiki
+You can see the Moove theme documentation on: https://github.com/willianmano/moodle-theme_moove/wiki
 
-Developed and maintained by
+Moove is developed and maintained by
 ===========================
 Willian Mano
  - Zend Certified PHP Engineer - ZEND028770
