@@ -7,7 +7,7 @@ Moodle "user1st" theme repository
 
 Maintained by Amy Groshek for [User1st](http://user1st.com/ "User first").
 
-![screenshot](pix/screenshot.jpg "user1st Screenshot")
+![screenshot](pix/screenshot.png "user1st Screenshot")
 
 ---------
 
