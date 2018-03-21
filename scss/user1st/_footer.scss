@@ -101,12 +101,21 @@
 @media (max-width: 543px) {
     #top-footer {
         .social {
-            text-align: left;
+            text-align: center;
         }
 
         .row.copy .image-wrap {
-            float: left;
+            display: inline-block;
+            width: 100%;
+            margin-top: 1em;
+            text-align: center;
         }
 
+        .row.copy .copyright-notice {
+            padding-top: 0;
+            text-align: center !important;
+            width: 100%;
+            display: inline-block;
+        }
     }
 }
