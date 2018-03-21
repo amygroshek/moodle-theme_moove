@@ -17,7 +17,7 @@
 /**
  * Language file.
  *
- * @package   theme_moove
+ * @package   theme_user1st
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,13 +27,13 @@ defined('MOODLE_INTERNAL') || die();
 $string['advancedsettings'] = 'Configurações avançadas';
 $string['brandcolor'] = 'Cor da marca';
 $string['brandcolor_desc'] = 'Cor principal.';
-$string['choosereadme'] = 'Moove é um tema moderno e altamente customizável. Este tema tem por objetivo ser usado diretamente, ou como um tema pai quando criados novos temas utilizando Bootstrap 4.';
+$string['choosereadme'] = 'user1st é um tema moderno e altamente customizável. Este tema tem por objetivo ser usado diretamente, ou como um tema pai quando criados novos temas utilizando Bootstrap 4.';
 $string['currentinparentheses'] = '(atual)';
-$string['configtitle'] = 'Moove';
+$string['configtitle'] = 'user1st';
 $string['generalsettings'] = 'Configurações gerais';
-$string['pluginname'] = 'Moove';
+$string['pluginname'] = 'user1st';
 $string['presetfiles'] = 'Arquivos de preset adicionais';
-$string['presetfiles_desc'] = 'Arquivos prese podem ser usados para alterar dramaticamente a aparência do tema. Veja <a href=https://docs.moodle.org/dev/Boost_Presets>Boost presets</a> para informações sobre criar e compartilhar seus próprios arquivos preset, e veja o <a href=http://moodle.net/moove>repositório de presets</a> que outros compartilharam.';
+$string['presetfiles_desc'] = 'Arquivos prese podem ser usados para alterar dramaticamente a aparência do tema. Veja <a href=https://docs.moodle.org/dev/Boost_Presets>Boost presets</a> para informações sobre criar e compartilhar seus próprios arquivos preset, e veja o <a href=http://moodle.net/user1st>repositório de presets</a> que outros compartilharam.';
 $string['preset'] = 'Theme preset';
 $string['preset_desc'] = 'Escolha um preset para alterar a aparência do tema.';
 $string['rawscss'] = 'SCSS cru';

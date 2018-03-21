@@ -17,12 +17,12 @@
 /**
  * Overriden theme boost core renderer.
  *
- * @package    theme_moove
+ * @package    theme_user1st
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output;
+namespace theme_user1st\output;
 
 use html_writer;
 use custom_menu_item;
@@ -43,7 +43,7 @@ defined('MOODLE_INTERNAL') || die;
 /**
  * Renderers to align Moodle's HTML with that expected by Bootstrap
  *
- * @package    theme_moove
+ * @package    theme_user1st
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -99,7 +99,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
             }
 
             if (isset($context)) {
-                return $this->render_from_template('theme_moove/lang_menu', $context);
+                return $this->render_from_template('theme_user1st/lang_menu', $context);
             }
         }
     }
@@ -154,7 +154,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
     public function get_pix_image_url_base() {
         global $CFG;
 
-        return $CFG->wwwroot . "/theme/moove/pix";
+        return $CFG->wwwroot . "/theme/user1st/pix";
     }
 
     /**
@@ -174,7 +174,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string
      */
     public function get_theme_logo_url() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         return $theme->setting_file_url('logo', 'logo');
     }
@@ -185,7 +185,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Getintouch url config
      */
     public function get_getintouchcontent_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->getintouchcontent;
 
@@ -198,7 +198,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Website url config
      */
     public function get_website_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->website;
 
@@ -211,7 +211,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Mobile url config
      */
     public function get_mobile_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->mobile;
 
@@ -224,7 +224,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Mail url config
      */
     public function get_mail_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->mail;
 
@@ -237,7 +237,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Facebook url config
      */
     public function get_facebook_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->facebook;
 
@@ -250,7 +250,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Twitter url config
      */
     public function get_twitter_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->twitter;
 
@@ -263,7 +263,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Googleplus url config
      */
     public function get_googleplus_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->googleplus;
 
@@ -276,7 +276,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Linkeding url config
      */
     public function get_linkedin_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->linkedin;
 
@@ -289,7 +289,7 @@ class core_renderer extends \theme_boost\output\core_renderer {
      * @return string Youtube url config
      */
     public function get_youtube_config() {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
 
         $setting = $theme->settings->youtube;
 

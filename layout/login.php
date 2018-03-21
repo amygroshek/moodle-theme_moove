@@ -17,14 +17,14 @@
 /**
  * A login page layout for the boost theme.
  *
- * @package   theme_moove
+ * @package   theme_user1st
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die();
 
-$extraclasses[] = 'moove-login';
+$extraclasses[] = 'user1st-login';
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 
 $templatecontext = [
@@ -33,4 +33,4 @@ $templatecontext = [
     'bodyattributes' => $bodyattributes
 ];
 
-echo $OUTPUT->render_from_template('theme_moove/login', $templatecontext);
+echo $OUTPUT->render_from_template('theme_user1st/login', $templatecontext);

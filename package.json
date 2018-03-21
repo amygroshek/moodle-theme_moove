@@ -1,7 +1,7 @@
 {
-  "name": "theme-moove-tasks",
+  "name": "theme-user1st-tasks",
   "version": "0.1.0",
-  "description": "Grunt tasks for Moodle MOOVE theme.",
+  "description": "Grunt tasks for Moodle user1st theme.",
   "main": "Gruntfile.js",
   "author": {
     "name": "Willian Mano",

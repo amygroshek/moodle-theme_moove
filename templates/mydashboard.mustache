@@ -15,11 +15,11 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/columns2
+    @template theme_user1st/columns2
 
     Admin time setting template.
 
-    Moove 2 column layout template.
+    user1st 2 column layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -63,12 +63,12 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_moove/header}}
+    {{>theme_user1st/header}}
 
     <div id="page" class="container-fluid">
 
         {{#is_siteadmin}}
-            {{>theme_moove/mydashboard_admin}}
+            {{>theme_user1st/mydashboard_admin}}
         {{/is_siteadmin}}
 
         {{{ output.full_header }}}
@@ -101,7 +101,7 @@
             data-side="right"
             data-preference="sidepre-open"
             class="fa"
-            title="{{#str}} showhideblocks, theme_moove {{/str}}">
+            title="{{#str}} showhideblocks, theme_user1st {{/str}}">
         </i>
 
         <section id="sidepre-blocks" data-region="blocks-column" class="hidden-print">
@@ -109,10 +109,10 @@
         </section>
     {{/hasblocks}}
 
-    {{> theme_moove/nav-drawer }}
+    {{> theme_user1st/nav-drawer }}
 </div>
 
-{{> theme_moove/footer }}
+{{> theme_user1st/footer }}
 
 </body>
 </html>

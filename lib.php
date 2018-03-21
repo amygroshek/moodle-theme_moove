@@ -17,7 +17,7 @@
 /**
  * Theme functions.
  *
- * @package    theme_moove
+ * @package    theme_user1st
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -30,10 +30,10 @@ defined('MOODLE_INTERNAL') || die();
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_get_extra_scss($theme) {
+function theme_user1st_get_extra_scss($theme) {
     $scss = $theme->settings->scss;
 
-    $scss .= theme_moove_set_headerimg($theme);
+    $scss .= theme_user1st_set_headerimg($theme);
 
     return $scss;
 }
@@ -44,7 +44,7 @@ function theme_moove_get_extra_scss($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_set_headerimg($theme) {
+function theme_user1st_set_headerimg($theme) {
     global $OUTPUT;
 
     $headerimg = $theme->setting_file_url('headerimg', 'headerimg');
@@ -64,7 +64,7 @@ function theme_moove_set_headerimg($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_get_main_scss_content($theme) {
+function theme_user1st_get_main_scss_content($theme) {
     global $CFG;
 
     $scss = '';
@@ -78,19 +78,19 @@ function theme_moove_get_main_scss_content($theme) {
     } else if ($filename == 'plain.scss') {
         // We still load the default preset files directly from the boost theme. No sense in duplicating them.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/plain.scss');
-    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_moove', 'preset', 0, '/', $filename))) {
-        // This preset file was fetched from the file area for theme_moove and not theme_boost (see the line above).
+    } else if ($filename && ($presetfile = $fs->get_file($context->id, 'theme_user1st', 'preset', 0, '/', $filename))) {
+        // This preset file was fetched from the file area for theme_user1st and not theme_boost (see the line above).
         $scss .= $presetfile->get_content();
     } else {
         // Safety fallback - maybe new installs etc.
         $scss .= file_get_contents($CFG->dirroot . '/theme/boost/scss/preset/default.scss');
     }
 
-    // Moove scss.
-    $moove = file_get_contents($CFG->dirroot . '/theme/moove/scss/moove.scss');
+    // user1st scss.
+    $user1st = file_get_contents($CFG->dirroot . '/theme/user1st/scss/user1st.scss');
 
     // Combine them together.
-    return $scss . "\n" . $moove;
+    return $scss . "\n" . $user1st;
 }
 
 /**
@@ -99,7 +99,7 @@ function theme_moove_get_main_scss_content($theme) {
  * @param theme_config $theme The theme config object.
  * @return string
  */
-function theme_moove_get_pre_scss($theme) {
+function theme_user1st_get_pre_scss($theme) {
     global $CFG;
 
     $scss = '';
@@ -139,36 +139,36 @@ function theme_moove_get_pre_scss($theme) {
  * @param array $options
  * @return mixed
  */
-function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
+function theme_user1st_pluginfile($course, $cm, $context, $filearea, $args, $forcedownload, array $options = array()) {
     if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'logo') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('logo', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'headerimg') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('headerimg', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'marketing1icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('marketing1icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'marketing2icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('marketing2icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'marketing3icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('marketing3icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'marketing4icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('marketing4icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'mainbox1icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('mainbox1icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'mainbox2icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('mainbox2icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'mainbox3icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('mainbox3icon', $args, $forcedownload, $options);
     } else if ($context->contextlevel == CONTEXT_SYSTEM and $filearea === 'mainbox4icon') {
-        $theme = theme_config::load('moove');
+        $theme = theme_config::load('user1st');
         return $theme->setting_file_serve('mainbox4icon', $args, $forcedownload, $options);
     } else {
         send_file_not_found();
@@ -182,8 +182,8 @@ function theme_moove_pluginfile($course, $cm, $context, $filearea, $args, $force
  * @param bool $format
  * @return string
  */
-function theme_moove_get_setting($setting, $format = false) {
-    $theme = theme_config::load('moove');
+function theme_user1st_get_setting($setting, $format = false) {
+    $theme = theme_config::load('user1st');
 
     if (empty($theme->settings->$setting)) {
         return false;
@@ -203,7 +203,7 @@ function theme_moove_get_setting($setting, $format = false) {
  *
  * @return array
  */
-function theme_moove_get_marketing_items() {
+function theme_user1st_get_marketing_items() {
     global $PAGE, $OUTPUT;
 
     $templatecontext = [];
@@ -217,17 +217,17 @@ function theme_moove_get_marketing_items() {
 
     $templatecontext['marketing1heading'] = '';
     if (!empty($PAGE->theme->settings->marketing1heading)) {
-        $templatecontext['marketing1heading'] = theme_moove_get_setting('marketing1heading', true);
+        $templatecontext['marketing1heading'] = theme_user1st_get_setting('marketing1heading', true);
     }
 
     $templatecontext['marketing1subheading'] = '';
     if (!empty($PAGE->theme->settings->marketing1subheading)) {
-        $templatecontext['marketing1subheading'] = theme_moove_get_setting('marketing1subheading', true);
+        $templatecontext['marketing1subheading'] = theme_user1st_get_setting('marketing1subheading', true);
     }
 
     $templatecontext['marketing1content'] = '';
     if (!empty($PAGE->theme->settings->marketing1content)) {
-        $templatecontext['marketing1content'] = theme_moove_get_setting('marketing1content', true);
+        $templatecontext['marketing1content'] = theme_user1st_get_setting('marketing1content', true);
     }
 
     $templatecontext['marketing1url'] = '';
@@ -244,17 +244,17 @@ function theme_moove_get_marketing_items() {
 
     $templatecontext['marketing2heading'] = '';
     if (!empty($PAGE->theme->settings->marketing2heading)) {
-        $templatecontext['marketing2heading'] = theme_moove_get_setting('marketing2heading', true);
+        $templatecontext['marketing2heading'] = theme_user1st_get_setting('marketing2heading', true);
     }
 
     $templatecontext['marketing2subheading'] = '';
     if (!empty($PAGE->theme->settings->marketing2subheading)) {
-        $templatecontext['marketing2subheading'] = theme_moove_get_setting('marketing2subheading', true);
+        $templatecontext['marketing2subheading'] = theme_user1st_get_setting('marketing2subheading', true);
     }
 
     $templatecontext['marketing2content'] = '';
     if (!empty($PAGE->theme->settings->marketing2content)) {
-        $templatecontext['marketing2content'] = theme_moove_get_setting('marketing2content', true);
+        $templatecontext['marketing2content'] = theme_user1st_get_setting('marketing2content', true);
     }
 
     $templatecontext['marketing2url'] = '';
@@ -271,17 +271,17 @@ function theme_moove_get_marketing_items() {
 
     $templatecontext['marketing3heading'] = '';
     if (!empty($PAGE->theme->settings->marketing3heading)) {
-        $templatecontext['marketing3heading'] = theme_moove_get_setting('marketing3heading', true);
+        $templatecontext['marketing3heading'] = theme_user1st_get_setting('marketing3heading', true);
     }
 
     $templatecontext['marketing3subheading'] = '';
     if (!empty($PAGE->theme->settings->marketing3subheading)) {
-        $templatecontext['marketing3subheading'] = theme_moove_get_setting('marketing3subheading', true);
+        $templatecontext['marketing3subheading'] = theme_user1st_get_setting('marketing3subheading', true);
     }
 
     $templatecontext['marketing3content'] = '';
     if (!empty($PAGE->theme->settings->marketing3content)) {
-        $templatecontext['marketing3content'] = theme_moove_get_setting('marketing3content', true);
+        $templatecontext['marketing3content'] = theme_user1st_get_setting('marketing3content', true);
     }
 
     $templatecontext['marketing3url'] = '';
@@ -298,17 +298,17 @@ function theme_moove_get_marketing_items() {
 
     $templatecontext['marketing4heading'] = '';
     if (!empty($PAGE->theme->settings->marketing4heading)) {
-        $templatecontext['marketing4heading'] = theme_moove_get_setting('marketing4heading', true);
+        $templatecontext['marketing4heading'] = theme_user1st_get_setting('marketing4heading', true);
     }
 
     $templatecontext['marketing4subheading'] = '';
     if (!empty($PAGE->theme->settings->marketing4subheading)) {
-        $templatecontext['marketing4subheading'] = theme_moove_get_setting('marketing4subheading', true);
+        $templatecontext['marketing4subheading'] = theme_user1st_get_setting('marketing4subheading', true);
     }
 
     $templatecontext['marketing4content'] = '';
     if (!empty($PAGE->theme->settings->marketing4content)) {
-        $templatecontext['marketing4content'] = theme_moove_get_setting('marketing4content', true);
+        $templatecontext['marketing4content'] = theme_user1st_get_setting('marketing4content', true);
     }
 
     $templatecontext['marketing4url'] = '';

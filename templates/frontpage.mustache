@@ -15,11 +15,11 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_moove/frontpage
+    @template theme_user1st/frontpage
 
     Admin time setting template.
 
-    Moove Frontpage layout template.
+    user1st Frontpage layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -63,7 +63,7 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_moove/header}}
+    {{>theme_user1st/header}}
 
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
@@ -97,7 +97,7 @@
             data-side="right"
             data-preference="sidepre-open"
             class="fa"
-            title="{{#str}} showhideblocks, theme_moove {{/str}}">
+            title="{{#str}} showhideblocks, theme_user1st {{/str}}">
         </i>
 
         <section id="sidepre-blocks" data-region="blocks-column" class="hidden-print">
@@ -105,10 +105,10 @@
         </section>
     {{/hasblocks}}
 
-    {{> theme_moove/nav-drawer }}
+    {{> theme_user1st/nav-drawer }}
 </div>
 
-{{> theme_moove/footer }}
+{{> theme_user1st/footer }}
 
 </body>
 </html>

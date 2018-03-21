@@ -17,12 +17,12 @@
 /**
  * Course renderer.
  *
- * @package    theme_moove
+ * @package    theme_user1st
  * @copyright  2017 Willian Mano - conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-namespace theme_moove\output\core;
+namespace theme_user1st\output\core;
 
 defined('MOODLE_INTERNAL') || die();
 
@@ -34,9 +34,9 @@ use stdClass;
 use course_in_list;
 
 /**
- * Renderers to align Moove's course elements to what is expect
+ * Renderers to align user1st's course elements to what is expect
  *
- * @package    theme_moove
+ * @package    theme_user1st
  * @copyright  2017 Willian Mano - http://conecti.me
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -247,7 +247,7 @@ class course_renderer extends \core_course_renderer {
 
         $content .= html_writer::start_tag('div', array('class' => 'pull-right'));
         $content .= html_writer::link(new moodle_url('/course/view.php', array('id' => $course->id)),
-                            get_string('access', 'theme_moove'), array('class' => 'card-link btn btn-default'));
+                            get_string('access', 'theme_user1st'), array('class' => 'card-link btn btn-default'));
         $content .= html_writer::end_tag('div'); // End pull-right.
 
         $content .= html_writer::end_tag('div'); // End card-block.
@@ -303,7 +303,7 @@ class course_renderer extends \core_course_renderer {
         }
 
         if (empty($contentimage)) {
-            $url = $CFG->wwwroot . "/theme/moove/pix/default_course.jpg";
+            $url = $CFG->wwwroot . "/theme/user1st/pix/default_course.jpg";
 
             $contentimage = html_writer::empty_tag('img', array('src' => $url, 'alt' => 'Course Image '. $course->fullname,
                         'class' => 'card-img-top w-100'));

@@ -17,7 +17,7 @@
 /**
  * Language file.
  *
- * @package   theme_moove
+ * @package   theme_user1st
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -27,13 +27,13 @@ defined('MOODLE_INTERNAL') || die();
 $string['advancedsettings'] = 'Advanced settings';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
-$string['choosereadme'] = 'Moove is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
+$string['choosereadme'] = 'user1st is a modern highly-customisable theme. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 $string['currentinparentheses'] = '(current)';
-$string['configtitle'] = 'Moove';
+$string['configtitle'] = 'user1st';
 $string['generalsettings'] = 'General settings';
-$string['pluginname'] = 'Moove';
+$string['pluginname'] = 'user1st';
 $string['presetfiles'] = 'Additional theme preset files';
-$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/Moove_Presets>Moove presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/moove>Presets repository</a> for presets that others have shared.';
+$string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme. See <a href=https://docs.moodle.org/dev/user1st_Presets>user1st presets</a> for information on creating and sharing your own preset files, and see the <a href=http://moodle.net/user1st>Presets repository</a> for presets that others have shared.';
 $string['preset'] = 'Theme preset';
 $string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
 $string['rawscss'] = 'Raw SCSS';

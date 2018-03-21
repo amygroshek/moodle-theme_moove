@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * A two column layout for the moove theme.
+ * A two column layout for the user1st theme.
  *
- * @package   theme_moove
+ * @package   theme_user1st
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -64,4 +64,4 @@ $templatecontext = [
 ];
 
 $templatecontext['flatnavigation'] = $PAGE->flatnav;
-echo $OUTPUT->render_from_template('theme_moove/columns2', $templatecontext);
+echo $OUTPUT->render_from_template('theme_user1st/columns2', $templatecontext);

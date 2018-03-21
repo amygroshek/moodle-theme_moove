@@ -15,9 +15,9 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Frontpage layout for the moove theme.
+ * Frontpage layout for the user1st theme.
  *
- * @package   theme_moove
+ * @package   theme_user1st
  * @copyright 2017 Willian Mano - http://conecti.me
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
@@ -62,23 +62,23 @@ if (isloggedin()) {
 
     $templatecontext['flatnavigation'] = $PAGE->flatnav;
 
-    echo $OUTPUT->render_from_template('theme_moove/frontpage', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_user1st/frontpage', $templatecontext);
 } else {
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
     $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 
     $bannerheading = '';
     if (!empty($PAGE->theme->settings->bannerheading)) {
-        $bannerheading = theme_moove_get_setting('bannerheading', true);
+        $bannerheading = theme_user1st_get_setting('bannerheading', true);
     }
 
     $bannercontent = '';
     if (!empty($PAGE->theme->settings->bannercontent)) {
-        $bannercontent = theme_moove_get_setting('bannercontent', true);
+        $bannercontent = theme_user1st_get_setting('bannercontent', true);
     }
 
     $shoulddisplaymarketing = false;
-    if (theme_moove_get_setting('displaymarketingbox', true) == true) {
+    if (theme_user1st_get_setting('displaymarketingbox', true) == true) {
         $shoulddisplaymarketing = true;
     }
 
@@ -92,7 +92,7 @@ if (isloggedin()) {
         'shoulddisplaymarketing' => $shoulddisplaymarketing,
     ];
 
-    $templatecontext = array_merge($templatecontext, theme_moove_get_marketing_items());
+    $templatecontext = array_merge($templatecontext, theme_user1st_get_marketing_items());
 
-    echo $OUTPUT->render_from_template('theme_moove/frontpage_guest', $templatecontext);
+    echo $OUTPUT->render_from_template('theme_user1st/frontpage_guest', $templatecontext);
 }
