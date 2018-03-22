@@ -219,3 +219,13 @@ body#page-mod-scorm-player {
         }
     }
 }
+
+@media (max-width: 543px) {
+    body#page-mod-scorm-player {
+        #page {
+            #scormpage #scorm_object {
+                height: 98%;
+            }
+        }
+    }
+}
