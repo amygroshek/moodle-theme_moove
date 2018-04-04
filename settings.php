@@ -163,6 +163,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Marketing1faicon.
+    $name = 'theme_user1st/marketing1faicon';
+    $title = get_string('marketing1faicon', 'theme_user1st');
+    $description = get_string('marketing1faicondesc', 'theme_user1st');
+    $default = 'fa-star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Marketing1heading.
     $name = 'theme_user1st/marketing1heading';
     $title = get_string('marketing1heading', 'theme_user1st');
@@ -204,6 +213,15 @@ if ($ADMIN->fulltree) {
     $description = get_string('marketing2icondesc', 'theme_user1st');
     $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'marketing2icon', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Marketing2faicon.
+    $name = 'theme_user1st/marketing2faicon';
+    $title = get_string('marketing2faicon', 'theme_user1st');
+    $description = get_string('marketing2faicondesc', 'theme_user1st');
+    $default = 'fa-star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
@@ -251,6 +269,15 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Marketing3faicon.
+    $name = 'theme_user1st/marketing3faicon';
+    $title = get_string('marketing3faicon', 'theme_user1st');
+    $description = get_string('marketing3faicondesc', 'theme_user1st');
+    $default = 'fa-star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     // Marketing3heading.
     $name = 'theme_user1st/marketing3heading';
     $title = get_string('marketing3heading', 'theme_user1st');
@@ -292,6 +319,15 @@ if ($ADMIN->fulltree) {
     $description = get_string('marketing4icondesc', 'theme_user1st');
     $opts = array('accepted_types' => array('.png', '.jpg', '.gif', '.webp', '.tiff', '.svg'));
     $setting = new admin_setting_configstoredfile($name, $title, $description, 'marketing4icon', 0, $opts);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Marketing4faicon.
+    $name = 'theme_user1st/marketing4faicon';
+    $title = get_string('marketing4faicon', 'theme_user1st');
+    $description = get_string('marketing4faicondesc', 'theme_user1st');
+    $default = 'fa-star';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 

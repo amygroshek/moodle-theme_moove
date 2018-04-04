@@ -140,9 +140,14 @@
             -moz-box-shadow: 0 0 5px #ccc;
             -webkit-box-shadow: 0 0 5px #ccc;
             box-shadow: 0 0 5px #ccc;
-            padding: 1em;
+            padding: 2em 1em;
             text-align: center;
             min-height: 300px;
+
+            i {
+                color: $m-dark-bg;
+                font-size: 5em;
+            }
 
             img {
                 max-width: 100%;
@@ -166,7 +171,11 @@
             p {
                 color: #9f9f9f;
                 font-size: 16px;
-                margin: 1.5em 0;
+                margin: .75em .5em 1.5em; // 1.5em 0;
+            }
+
+            a.btn {
+                border-radius: 0;
             }
         }
     }

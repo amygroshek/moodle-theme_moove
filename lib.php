@@ -212,7 +212,13 @@ function theme_user1st_get_marketing_items() {
     if (!empty($PAGE->theme->settings->marketing1icon)) {
         $templatecontext['marketing1icon'] = $PAGE->theme->setting_file_url('marketing1icon', 'marketing1icon');
     } else {
-        $templatecontext['marketing1icon'] = $OUTPUT->image_url('icon_default', 'theme');
+        $templatecontext['marketing1icon'] = false;
+    }
+
+    if (!empty($PAGE->theme->settings->marketing1faicon)) {
+        $templatecontext['marketing1faicon'] = theme_user1st_get_setting('marketing1faicon', true);
+    } else {
+        $templatecontext['marketing1faicon'] = 'fa-star';
     }
 
     $templatecontext['marketing1heading'] = '';
@@ -239,7 +245,13 @@ function theme_user1st_get_marketing_items() {
     if (!empty($PAGE->theme->settings->marketing2icon)) {
         $templatecontext['marketing2icon'] = $PAGE->theme->setting_file_url('marketing2icon', 'marketing2icon');
     } else {
-        $templatecontext['marketing2icon'] = $OUTPUT->image_url('icon_default', 'theme');
+        $templatecontext['marketing2icon'] = false;
+    }
+
+    if (!empty($PAGE->theme->settings->marketing2faicon)) {
+        $templatecontext['marketing2faicon'] = theme_user1st_get_setting('marketing2faicon', true);
+    } else {
+        $templatecontext['marketing2faicon'] = 'fa-star';
     }
 
     $templatecontext['marketing2heading'] = '';
@@ -266,7 +278,13 @@ function theme_user1st_get_marketing_items() {
     if (!empty($PAGE->theme->settings->marketing3icon)) {
         $templatecontext['marketing3icon'] = $PAGE->theme->setting_file_url('marketing3icon', 'marketing3icon');
     } else {
-        $templatecontext['marketing3icon'] = $OUTPUT->image_url('icon_default', 'theme');
+        $templatecontext['marketing3icon'] = false;
+    }
+
+    if (!empty($PAGE->theme->settings->marketing3faicon)) {
+        $templatecontext['marketing3faicon'] = theme_user1st_get_setting('marketing3faicon', true);
+    } else {
+        $templatecontext['marketing3faicon'] = 'fa-star';
     }
 
     $templatecontext['marketing3heading'] = '';
@@ -293,7 +311,13 @@ function theme_user1st_get_marketing_items() {
     if (!empty($PAGE->theme->settings->marketing4icon)) {
         $templatecontext['marketing4icon'] = $PAGE->theme->setting_file_url('marketing4icon', 'marketing4icon');
     } else {
-        $templatecontext['marketing4icon'] = $OUTPUT->image_url('icon_default', 'theme');
+        $templatecontext['marketing4icon'] = false;
+    }
+
+    if (!empty($PAGE->theme->settings->marketing4faicon)) {
+        $templatecontext['marketing4faicon'] = theme_user1st_get_setting('marketing4faicon', true);
+    } else {
+        $templatecontext['marketing4faicon'] = 'fa-star';
     }
 
     $templatecontext['marketing4heading'] = '';

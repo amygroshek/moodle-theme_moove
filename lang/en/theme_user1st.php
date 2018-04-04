@@ -72,6 +72,8 @@ $string['displaymarketingboxdesc'] = 'Show or Hide Front page Marketingbox';
 
 $string['marketing1icon'] = 'Marketing1 Icon';
 $string['marketing1icondesc'] = 'Upload Marketing1 Icon';
+$string['marketing1faicon'] = 'Marketing1 FontAwesome Icon';
+$string['marketing1faicondesc'] = 'Enter FontAwesome class for Marketing1 Icon';
 $string['marketing1heading'] = 'Marketing1 Heading';
 $string['marketing1headingdesc'] = 'Enter Marketing1 Heading Text';
 $string['marketing1subheading'] = 'Marketing1 Subheading';
@@ -83,36 +85,42 @@ $string['marketing1urldesc'] = 'Enter Marketing1 URL';
 
 $string['marketing2icon'] = 'Marketing2 Icon';
 $string['marketing2icondesc'] = 'Upload Marketing2 Icon';
+$string['marketing2faicon'] = 'Marketing2 FontAwesome Icon';
+$string['marketing2faicondesc'] = 'Enter FontAwesome class for Marketing2 Icon';
 $string['marketing2heading'] = 'Marketing2 Heading';
 $string['marketing2headingdesc'] = 'Enter Marketing2 Heading Text';
 $string['marketing2subheading'] = 'Marketing2 Subheading';
 $string['marketing2subheadingdesc'] = 'Enter Marketing2 Subheading Text';
 $string['marketing2content'] = 'Marketing2 Content';
 $string['marketing2contentdesc'] = 'Enter Marketing2 Content Text';
-$string['marketing2url'] = 'Marketing1 URL';
-$string['marketing2urldesc'] = 'Enter Marketing1 URL';
+$string['marketing2url'] = 'Marketing2 URL';
+$string['marketing2urldesc'] = 'Enter Marketing2 URL';
 
 $string['marketing3icon'] = 'Marketing3 Icon';
 $string['marketing3icondesc'] = 'Upload Marketing3 Icon';
+$string['marketing3faicon'] = 'Marketing3 FontAwesome Icon';
+$string['marketing3faicondesc'] = 'Enter FontAwesome class for Marketing3 Icon';
 $string['marketing3heading'] = 'Marketing3 Heading';
 $string['marketing3headingdesc'] = 'Enter Marketing3 Heading Text';
 $string['marketing3subheading'] = 'Marketing3 Subheading';
 $string['marketing3subheadingdesc'] = 'Enter Marketing3 Subheading Text';
 $string['marketing3content'] = 'Marketing3 Content';
 $string['marketing3contentdesc'] = 'Enter Marketing3 Content Text';
-$string['marketing3url'] = 'Marketing1 URL';
-$string['marketing3urldesc'] = 'Enter Marketing1 URL';
+$string['marketing3url'] = 'Marketing3 URL';
+$string['marketing3urldesc'] = 'Enter Marketing3 URL';
 
 $string['marketing4icon'] = 'Marketing4 Icon';
 $string['marketing4icondesc'] = 'Upload Marketing4 Icon';
+$string['marketing4faicon'] = 'Marketing4 FontAwesome Icon';
+$string['marketing4faicondesc'] = 'Enter FontAwesome class for Marketing4 Icon';
 $string['marketing4heading'] = 'Marketing4 Heading';
 $string['marketing4headingdesc'] = 'Enter Marketing4 Heading Text';
 $string['marketing4subheading'] = 'Marketing4 Subheading';
 $string['marketing4subheadingdesc'] = 'Enter Marketing4 Subheading Text';
 $string['marketing4content'] = 'Marketing4 Content';
 $string['marketing4contentdesc'] = 'Enter Marketing4 Content Text';
-$string['marketing4url'] = 'Marketing1 URL';
-$string['marketing4urldesc'] = 'Enter Marketing1 URL';
+$string['marketing4url'] = 'Marketing4 URL';
+$string['marketing4urldesc'] = 'Enter Marketing4 URL';
 
 $string['footersettings'] = 'Footer settings';
 $string['getintouchcontent'] = 'Get In Touch Content';
