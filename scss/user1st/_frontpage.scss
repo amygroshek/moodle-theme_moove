@@ -20,7 +20,7 @@
         background-position: left top;
         background-repeat: no-repeat;
         background-color: #ccc;
-        background-size: 100%;
+        background-size: cover;
         min-height: 540px;
 
         .frontpage-guest-header {
@@ -37,6 +37,7 @@
                 #intro {
                     text-align: left;
                     color: #fff;
+                    padding-top: 2em;
 
                     h1 {
                         font-size: 2.5em;
@@ -129,64 +130,60 @@
     }
 
     .frontpage-marketing {
-        margin: -5em 0 2em 0;
+        margin: -5em 0 0 0;
         padding: 2em 20px 0 20px;
-        // background-image: url('[[pix:theme|headerimg-bg]]');
         background-position: center top;
         background-repeat: repeat-x;
 
         .marketing-box {
-            background-color: #fff;
-            -moz-box-shadow: 0 0 5px #ccc;
-            -webkit-box-shadow: 0 0 5px #ccc;
-            box-shadow: 0 0 5px #ccc;
-            padding: 2em 1em;
             text-align: center;
             min-height: 300px;
+            margin-bottom: 30px;
 
-            i {
-                color: $m-dark-bg;
-                font-size: 5em;
-            }
+            .inner {
+                background-color: #fff;
+                -moz-box-shadow: 0 0 5px #ccc;
+                -webkit-box-shadow: 0 0 5px #ccc;
+                box-shadow: 0 0 5px #ccc;
+                padding: 1.5em .5em 1.5em 0;
 
-            img {
-                max-width: 100%;
-            }
+                &:first-child {
+                    padding-left: 0;
+                }
 
-            h2 {
-                font-size: 1.75em;
-                color: #565656;
-                text-transform: uppercase;
-                margin: 20px 0;
-                font-weight: normal;
-            }
+                i {
+                    color: $m-dark-bg;
+                    font-size: 5em;
+                }
 
-            h3 {
-                font-size: 1.3em;
-                text-transform: uppercase;
-                font-weight: normal;
-                color: #a4a3a3;
-            }
+                img {
+                    max-width: 100%;
+                }
 
-            p {
-                color: #9f9f9f;
-                font-size: 16px;
-                margin: .75em .5em 1.5em; // 1.5em 0;
-            }
+                h2 {
+                    font-size: 1.75em;
+                    color: #565656;
+                    text-transform: uppercase;
+                    margin: 20px 0;
+                    font-weight: normal;
+                }
 
-            a.btn {
-                border-radius: 0;
-            }
-        }
-    }
+                h3 {
+                    font-size: 1.3em;
+                    text-transform: uppercase;
+                    font-weight: normal;
+                    color: #a4a3a3;
+                }
 
-    @media (min-width: 1200px) {
-        .frontpage-marketing .marketing-box {
-            width: 23.07692308%;
-            margin-left: 2.56410256%;
+                p {
+                    color: #9f9f9f;
+                    font-size: 16px;
+                    margin: .75em .5em 1.5em; // 1.5em 0;
+                }
 
-            &:first-child {
-                margin-left: 0;
+                a.btn {
+                    border-radius: 0;
+                }
             }
         }
     }
@@ -204,5 +201,15 @@
 
     h2 {
         margin: 2rem 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #page-site-index.notloggedin .frontpage-marketing {
+        margin: 0 0 0 0;
+    }
+
+    #page-site-index.notloggedin #page-header .frontpage-guest-header #loginbox #boxForm {
+      margin: 30px 30px 0;
     }
 }
