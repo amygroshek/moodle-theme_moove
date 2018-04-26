@@ -51,6 +51,7 @@ $string['search_site'] = 'Search on site';
 $string['search_forums'] = 'Search on course forums';
 $string['platform_access'] = 'Access to the platform';
 $string['readmore'] = 'Read More';
+$string['readmorearia'] = 'Read more about';
 $string['stayintouch'] = 'Contact Us';
 $string['madewitmoodle'] = 'Proudly made with';
 $string['madeby'] = 'This theme was developed by';
