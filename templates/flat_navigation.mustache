@@ -67,7 +67,7 @@
     {{/showdivider}}
     {{#action}}
       {{^is_section}}
-        <a class="list-group-item list-group-item-action {{#isactive}}font-weight-bold{{/isactive}}" href="{{{action}}}" data-key="{{key}}">
+        <a class="list-group-item list-group-item-action {{#isactive}}font-weight-bold{{/isactive}}" href="{{{action}}}" data-key="{{key}}" aria-label="Go to {{key}}">
             <div class="m-l-{{get_indent}}">
                 <span class="text">{{{text}}}</span>
             </div>
@@ -75,7 +75,7 @@
       {{/is_section}}
     {{/action}}
     {{^action}}
-    <div class="list-group-item" data-key="{{key}}">
+    <div class="list-group-item" data-key="{{key}}" data-label="Access {{key}}">
         <div class="m-l-{{get_indent}}">
             {{#is_section}}
                 {{#pix}}i/folder{{/pix}}

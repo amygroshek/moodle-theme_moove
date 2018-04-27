@@ -120,6 +120,12 @@
             font: normal normal normal 14px/1 FontAwesome;
             content: "\f085";
         }
+
+        // Hide calendar in drawer
+        [data-key="calendar"],
+        [data-key="privatefiles"] {
+            display: none;
+        }
     }
 
     .list-group.m-t-1 {

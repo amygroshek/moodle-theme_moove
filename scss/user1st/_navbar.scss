@@ -99,6 +99,8 @@
                             }
                         }
                     }
+
+
                 }
 
                 .popover-region-container {
@@ -145,6 +147,12 @@
     }
 }
 
+// Hide messages link in action menu
+.action-menu a[data-title*="message"] {
+    display: none !important;
+}
+
+/* Hover color for action menu */
 #page-site-index.notloggedin {
     .navbar {
         .navbar-custom-menu {

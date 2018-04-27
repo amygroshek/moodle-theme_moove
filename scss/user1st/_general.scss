@@ -237,3 +237,8 @@ h1,
         }
     }
 }
+
+/* Hide forum links in student profile */
+.path-user section.node_category:nth-child(3) {
+    display: none;
+}
