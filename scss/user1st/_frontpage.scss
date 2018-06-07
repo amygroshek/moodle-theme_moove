@@ -145,12 +145,12 @@
                 -moz-box-shadow: 0 0 5px #ccc;
                 -webkit-box-shadow: 0 0 5px #ccc;
                 box-shadow: 0 0 5px #ccc;
-                padding: 1.5em .5em 1.5em 0;
-                min-height: 400px;
+                padding: 2.5em .5em 1.5em 0;
+                min-height: 380px;
 
-                &:first-child {
-                    padding-left: 0;
-                }
+                // &:first-child {
+                //     padding-left: 0;
+                // }
 
                 i {
                     color: $m-dark-bg;
@@ -165,7 +165,7 @@
                     font-size: 1.75em;
                     color: #565656;
                     text-transform: uppercase;
-                    margin: 20px 0;
+                    margin: 25px 0 20px;
                     font-weight: normal;
                 }
 
