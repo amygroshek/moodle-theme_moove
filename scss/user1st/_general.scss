@@ -255,8 +255,12 @@ h1,
     .fa-arrow-right {
         margin-left: .5em;
     }
+
+    a {
+        border-radius: 0;
+    }
 }
 
 .notloggedin .frontpage-welcome-parent {
-    margin: 0 2rem;
+    margin: 0 2.5rem;
 }
