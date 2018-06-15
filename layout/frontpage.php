@@ -85,10 +85,12 @@ if (isloggedin()) {
     $printavailcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
         $printavailcoursewelcome = true; // theme_user1st_get_setting('avail_courses_welcome', true);
+        echo '$printavailcoursewelcome = '.$printavailcoursewelcome;
     }
 
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
+        echo '$availcoursewelcome = '.$availcoursewelcome;
         $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
@@ -105,6 +107,10 @@ if (isloggedin()) {
     ];
 
     $templatecontext = array_merge($templatecontext, theme_user1st_get_marketing_items());
-
-    echo $OUTPUT->render_from_template('theme_user1st/frontpage_guest', $templatecontext);
+    if (isloggedin()) {
+        // render from regular front page template.
+        echo $OUTPUT->render_from_template('theme_user1st/frontpage', $templatecontext);
+    } else {
+        echo $OUTPUT->render_from_template('theme_user1st/frontpage_guest', $templatecontext);
+    }
 }
