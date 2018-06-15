@@ -31,6 +31,9 @@ require_once($CFG->libdir . '/behat/lib.php');
 
 $extraclasses = [];
 
+global $USER;
+echo print_r($USER);
+
 if (isloggedin()) {
     $blockshtml = $OUTPUT->blocks('side-pre');
     $hasblocks = strpos($blockshtml, 'data-block=') !== false;
@@ -46,6 +49,16 @@ if (isloggedin()) {
         $extraclasses[] = 'drawer-open-right';
     }
 
+    $printavailcoursewelcome = '';
+    if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
+        $printavailcoursewelcome = true;
+    }
+
+    $availcoursewelcome = '';
+    if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
+        $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
+    }
+
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
     $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
     $templatecontext = [
@@ -57,7 +70,9 @@ if (isloggedin()) {
         'navdraweropen' => $navdraweropen,
         'draweropenright' => $draweropenright,
         'regionmainsettingsmenu' => $regionmainsettingsmenu,
-        'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu)
+        'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
+        'availcoursewelcome' => $availcoursewelcome,
+        'printavailcoursewelcome' => $printavailcoursewelcome
     ];
 
     $templatecontext['flatnavigation'] = $PAGE->flatnav;
@@ -107,10 +122,6 @@ if (isloggedin()) {
     ];
 
     $templatecontext = array_merge($templatecontext, theme_user1st_get_marketing_items());
-    if (isloggedin()) {
-        // render from regular front page template.
-        echo $OUTPUT->render_from_template('theme_user1st/frontpage', $templatecontext);
-    } else {
-        echo $OUTPUT->render_from_template('theme_user1st/frontpage_guest', $templatecontext);
-    }
+
+    echo $OUTPUT->render_from_template('theme_user1st/frontpage_guest', $templatecontext);
 }
