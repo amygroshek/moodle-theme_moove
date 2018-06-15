@@ -208,6 +208,20 @@
     margin: 3.5rem 2rem 0;
 }
 
+.pagelayout-frontpage
+    .card-block-info {
+        padding-bottom: 0;
+    }
+
+    .card-block-actions {
+        padding-top: 0;
+    }
+
+    .card-text {
+        min-height: 220px;
+    }
+}
+
 #frontpage-course-list {
     margin-left: 2rem;
 
@@ -215,6 +229,8 @@
         margin: 2rem 0;
     }
 }
+
+
 
 @media screen and (max-width: 768px) {
     #page-site-index.notloggedin .frontpage-marketing {

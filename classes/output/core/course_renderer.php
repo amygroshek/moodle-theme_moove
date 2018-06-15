@@ -238,7 +238,7 @@ class course_renderer extends \core_course_renderer {
 
         $content = $this->get_course_summary_image($course);
 
-        $content .= html_writer::start_tag('div', array('class' => 'card-block'));
+        $content .= html_writer::start_tag('div', array('class' => 'card-block card-block-info'));
         $content .= "<h4 class='card-title'>". $coursenamelink ."</h4>";
 
         // Display course summary.
@@ -253,7 +253,7 @@ class course_renderer extends \core_course_renderer {
 
         $content .= html_writer::end_tag('div');
 
-        $content .= html_writer::start_tag('div', array('class' => 'card-block'));
+        $content .= html_writer::start_tag('div', array('class' => 'card-block card-block-actions'));
 
         // Print enrolmenticons.
         if ($icons = enrol_get_course_info_icons($course)) {
