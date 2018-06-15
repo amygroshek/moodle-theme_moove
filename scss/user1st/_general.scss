@@ -242,3 +242,13 @@ h1,
 .path-user section.node_category:nth-child(3) {
     display: none;
 }
+
+/* welcome on the front page and dashboard */
+.frontpage-welcome-parent,
+.dashboard-welcome-parent {
+    margin-bottom: 1em;
+    padding: 2.5em 2.5em 2em;
+    background-color: #fff;
+    border-radius: 0;
+    border: 1px solid rgba(238,238,238,1);
+}
