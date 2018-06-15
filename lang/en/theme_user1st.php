@@ -34,6 +34,7 @@ $string['currentinparentheses'] = '(current)';
 $string['configtitle'] = 'User1st';
 $string['dashboard_welcome_title'] = 'Dashboard Welcome';
 $string['dashboard_welcome_desc'] = 'Enter welcome or informational text to be displayed at the top of the dashboard page.';
+$string['dashboard_view_available'] = 'View available courses';
 $string['frontpageloggedinwelcome'] = 'Welcome,';
 $string['frontpageguestwelcome'] = 'Welcome';
 $string['generalsettings'] = 'General settings';

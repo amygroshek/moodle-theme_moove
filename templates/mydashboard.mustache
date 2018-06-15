@@ -85,11 +85,15 @@
                         <div class="container-fluid">
                             <div class="frontpage-welcome">{{{dashboardwelcome}}}
                                 <div class="frontpage-welcome-buttons">
-                                    {{#phone}}<a class="btn btn-primary" href="tel:{{phone}}">
+                                    {{#phone}}<a aria-label="Call us" class="btn btn-primary" href="tel:{{phone}}">
                                         <i class="fa fa-phone"></i></a>
                                     {{/phone}}
-                                    {{#email}}<a class="btn btn-primary" href="mailto:{{email}}">
+                                    {{#email}}<a aria-label="Email us" class="btn btn-primary" href="mailto:{{email}}">
                                         <i class="fa fa-envelope"></i></a>{{/email}}
+                                    {{#dashboardviewavailable}}
+                                    <a class="btn btn-primary" href="{{siteroot}}">
+                                            <i class="fa fa-chalkboard-teacher"></i>{{dashboardviewavailable}}</a>
+                                    {{/dashboardviewavailable}}
                                 </div>
                             <div>
                         </div>

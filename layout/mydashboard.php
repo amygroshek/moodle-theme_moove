@@ -34,8 +34,9 @@ $user = null;
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
     $draweropenright = (get_user_preferences('sidepre-open', 'true') == 'true');
-    global $USER;
+    global $USER, $CFG;
     $user = $USER;
+    $cfg = $CFG;
 } else {
     $navdraweropen = false;
     $draweropenright = false;
@@ -76,6 +77,10 @@ if (!empty($PAGE->theme->settings->mail)) {
     $email = theme_user1st_get_setting('mail', true);
 }
 
+$dashboardviewavailable =
+    get_string('dashboard_view_available', 'theme_user1st') ? get_string('dashboard_view_available', 'theme_user1st') :
+    'View available courses';
+
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $templatecontext = [
@@ -92,7 +97,9 @@ $templatecontext = [
     'printdashboardwelcome' => $printdashboardwelcome,
     'dashboardwelcome' => $dashboardwelcome,
     'phone' => $phone,
-    'email' => $email
+    'email' => $email,
+    'dashboardviewavailable' => $dashboardviewavailable,
+    'siteroot' => $cfg->wwwroot;
 ];
 
 if (is_siteadmin()) {
