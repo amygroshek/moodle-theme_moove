@@ -137,7 +137,6 @@
 
         .marketing-box {
             text-align: center;
-            // min-height: 350px;
             margin-bottom: 30px;
 
             .inner {
@@ -147,10 +146,6 @@
                 box-shadow: 0 0 5px #ccc;
                 padding: 2.5em .5em 1.5em 0;
                 min-height: 400px;
-
-                // &:first-child {
-                //     padding-left: 0;
-                // }
 
                 i {
                     color: $m-dark-bg;
@@ -218,7 +213,7 @@
     }
 
     .card-text {
-        min-height: 220px;
+        min-height: 205px;
     }
 }
 

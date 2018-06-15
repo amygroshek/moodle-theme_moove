@@ -263,4 +263,7 @@ h1,
 
 .notloggedin .frontpage-welcome-parent {
     margin: 0 2.5rem;
+    -moz-box-shadow: 0 0 2px #ccc;
+    -webkit-box-shadow: 0 0 2px #ccc;
+    box-shadow: 0 0 2px #ccc;
 }
