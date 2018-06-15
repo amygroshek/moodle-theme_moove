@@ -224,14 +224,13 @@ class course_renderer extends \core_course_renderer {
         $content = $this->get_course_summary_image($course);
 
         $content .= html_writer::start_tag('div', array('class' => 'card-block'));
-        $content .= 'testytestytest !!!! ';
         $content .= "<h4 class='card-title'>". $coursenamelink ."</h4>";
 
         // Display course summary.
         if ($course->has_summary()) {
             $content .= html_writer::start_tag('p', array('class' => 'card-text'));
             $content .= $chelper->get_course_formatted_summary($course,
-                    array('overflowdiv' => true, 'noclean' => true, 'para' => false));
+                    array('overflowdiv' => false, 'noclean' => true, 'para' => false));
             $content .= html_writer::end_tag('p'); // End summary.
         }
 
