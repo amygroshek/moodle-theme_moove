@@ -56,7 +56,7 @@ if (isloggedin()) {
 
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
-        $availcoursewelcome = html_writer::tag('h2', "Welcome"." ".$user[firstname], array(class => 'front-avail-welcome use1st-welcome'));
+        // $availcoursewelcome = html_writer::tag('h2', 'Welcome'.' '.$user[firstname], array(class => 'front-avail-welcome use1st-welcome'));
         $availcoursewelcome .= theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
