@@ -208,14 +208,19 @@
         height: 550px;
     }
 
+    .card-title {
+        line-height: 1.2;
+    }
+
     .card-block-info {
         padding-bottom: 0;
     }
 
     .card-block-actions {
         padding-top: 0;
-        position: relative;
-        bottom: 1.25rem;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
     }
 
     .card-text {
