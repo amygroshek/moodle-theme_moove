@@ -76,15 +76,23 @@
                 </div>
                 {{/hasregionmainsettingsmenu}}
                 <section id="region-main">
+                    {{#printavailcoursewelcome}}
+                        <div class="container-fluid">
+                            <div class="frontpage-welcome">{{{availcoursewelcome}}}
+                                <div class="frontpage-welcome-buttons">
+                                    {{#phone}}<a class="btn btn-default" href="tel:{{phone}}">
+                                        <i class="fa fa-phone"></i></a>
+                                    {{/phone}}
+                                    {{#email}}<a class="btn btn-default" href="mailto:{{email}}">
+                                        <i class="fa fa-phone"></i></a>{{/email}}
+                                </div>
+                            <div>
+                        </div>
+                    {{/printavailcoursewelcome}}
                     <div class="card card-block">
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
-                    {{#printavailcoursewelcome}}
-                        <div class="container-fluid">
-                            <div class="frontpage-welcome">{{{availcoursewelcome}}}<div>
-                        </div>
-                    {{/printavailcoursewelcome}}
                     {{{ output.course_content_header }}}
                     {{{ output.main_content }}}
                     {{{ output.course_content_footer }}}

@@ -62,6 +62,16 @@ if (isloggedin()) {
         $availcoursewelcome .= theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
+    $phone = '';
+    if (!empty($PAGE->theme->settings->mobile)) {
+        $phone = theme_user1st_get_setting('mobile', true);
+    }
+
+    $email = '';
+    if (!empty($PAGE->theme->settings->mail)) {
+        $email = theme_user1st_get_setting('mail', true);
+    }
+
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
     $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
     $templatecontext = [
@@ -75,7 +85,9 @@ if (isloggedin()) {
         'regionmainsettingsmenu' => $regionmainsettingsmenu,
         'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
         'availcoursewelcome' => $availcoursewelcome,
-        'printavailcoursewelcome' => $printavailcoursewelcome
+        'printavailcoursewelcome' => $printavailcoursewelcome,
+        'phone' => $phone,
+        'email' => $email
     ];
 
     $templatecontext['flatnavigation'] = $PAGE->flatnav;
@@ -112,6 +124,16 @@ if (isloggedin()) {
         $availcoursewelcome .= theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
+    $phone = '';
+    if (!empty($PAGE->theme->settings->mobile)) {
+        $phone = theme_user1st_get_setting('mobile', true);
+    }
+
+    $email = '';
+    if (!empty($PAGE->theme->settings->mail)) {
+        $email = theme_user1st_get_setting('mail', true);
+    }
+
     $templatecontext = [
         'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
         'output' => $OUTPUT,
@@ -121,7 +143,9 @@ if (isloggedin()) {
         'bannercontent' => $bannercontent,
         'shoulddisplaymarketing' => $shoulddisplaymarketing,
         'availcoursewelcome' => $availcoursewelcome,
-        'printavailcoursewelcome' => $printavailcoursewelcome
+        'printavailcoursewelcome' => $printavailcoursewelcome,
+        'phone' => $phone,
+        'email' => $email
     ];
 
     $templatecontext = array_merge($templatecontext, theme_user1st_get_marketing_items());
