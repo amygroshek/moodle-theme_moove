@@ -99,7 +99,7 @@ $templatecontext = [
     'phone' => $phone,
     'email' => $email,
     'dashboardviewavailable' => $dashboardviewavailable,
-    'siteroot' => $cfg->wwwroot;
+    'siteroot' => $cfg->wwwroot
 ];
 
 if (is_siteadmin()) {
