@@ -56,9 +56,9 @@ if (isloggedin()) {
 
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
-        echo print_r($user);
-        $welcome_header = get_string('frontpagewelcome', 'theme_user1st').' '.$user->firstname.'!';
-        $availcoursewelcome = html_writer::tag('h2', $welcome_header, array('class' => 'front-avail-welcome use1st-welcome'));
+        // echo print_r($user);
+        $welcome_header = get_string('frontpageloggedinwelcome', 'theme_user1st').' '.$user->firstname.'!';
+        $availcoursewelcome = html_writer::tag('h2', $welcome_header, array('class' => 'front-avail-welcome use1st-welcome loggedin'));
         $availcoursewelcome .= theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
@@ -106,10 +106,14 @@ if (isloggedin()) {
         // echo '$printavailcoursewelcome = '.$printavailcoursewelcome;
     }
 
+    $welcome_header = get_string('frontpagewelcome', 'theme_user1st').' '.$user->firstname.'!';
+    $availcoursewelcome = html_writer::tag('h2', $welcome_header, array('class' => 'front-avail-welcome use1st-welcome'));
+
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
-        // echo '$availcoursewelcome = '.$availcoursewelcome;
-        $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
+        $welcome_header = get_string('frontpageguestwelcome', 'theme_user1st').'!';
+        $availcoursewelcome .= html_writer::tag('h2', $welcome_header, array('class' => 'front-avail-welcome use1st-welcome guest'));
+        $availcoursewelcome .= theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
     $templatecontext = [
