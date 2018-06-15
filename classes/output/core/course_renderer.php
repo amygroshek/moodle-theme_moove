@@ -228,10 +228,10 @@ class course_renderer extends \core_course_renderer {
 
         // Display course summary.
         if ($course->has_summary()) {
-            $content .= html_writer::start_tag('p', array('class' => 'card-text'));
+            $content .= html_writer::start_tag('div', array('class' => 'card-text'));
             $content .= $chelper->get_course_formatted_summary($course,
                     array('overflowdiv' => false, 'noclean' => true, 'para' => false));
-            $content .= html_writer::end_tag('p'); // End summary.
+            $content .= html_writer::end_tag('div'); // End summary.
         }
 
         $content .= html_writer::end_tag('div');
