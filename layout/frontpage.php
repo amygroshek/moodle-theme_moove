@@ -31,10 +31,10 @@ require_once($CFG->libdir . '/behat/lib.php');
 
 $extraclasses = [];
 
-global $USER;
-echo print_r($USER);
-
 if (isloggedin()) {
+    global $USER;
+    $user = $USER;
+
     $blockshtml = $OUTPUT->blocks('side-pre');
     $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 
@@ -56,7 +56,8 @@ if (isloggedin()) {
 
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
-        $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
+        $availcoursewelcome = html_writer::h2('Welcome'.' '.$user[firstname], 'front-avail-welcome use1st-welcome');
+        $availcoursewelcome .= theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
     $bodyattributes = $OUTPUT->body_attributes($extraclasses);
