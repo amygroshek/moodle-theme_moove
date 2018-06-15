@@ -249,6 +249,8 @@ class course_renderer extends \core_course_renderer {
             $summary = strip_tags($summary);
             if (str_word_count($summary) > 50) {
                 $content .= course_renderer::limit_text($summary, 50);
+            } else {
+                $content .= $summary;
             }
             $content .= html_writer::end_tag('div'); // End summary.
         }
