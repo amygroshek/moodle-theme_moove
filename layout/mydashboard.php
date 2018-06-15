@@ -29,9 +29,13 @@ user_preference_allow_ajax_update('sidepre-open', PARAM_ALPHA);
 
 require_once($CFG->libdir . '/behat/lib.php');
 
+$user = null;
+
 if (isloggedin()) {
     $navdraweropen = (get_user_preferences('drawer-open-nav', 'true') == 'true');
     $draweropenright = (get_user_preferences('sidepre-open', 'true') == 'true');
+    global $USER;
+    $user = $USER;
 } else {
     $navdraweropen = false;
     $draweropenright = false;
@@ -49,6 +53,29 @@ if ($draweropenright && $hasblocks) {
     $extraclasses[] = 'drawer-open-right';
 }
 
+$printdashboardwelcome = '';
+if (!empty($PAGE->theme->settings->dashboard_welcome)) {
+    $printdashboardwelcome = true;
+}
+
+$dashboardwelcome = '';
+if (!empty($PAGE->theme->settings->dashboard_welcome)) {
+    // echo print_r($user);
+    $welcome_header = get_string('frontpageloggedinwelcome', 'theme_user1st').' '.$user->firstname.'!';
+    $dashboardwelcome = html_writer::tag('h2', $welcome_header, array('class' => 'dashboard-welcome use1st-welcome loggedin'));
+    $dashboardwelcome .= theme_user1st_get_setting('dashboard_welcome', true);
+}
+
+$phone = '';
+if (!empty($PAGE->theme->settings->mobile)) {
+    $phone = theme_user1st_get_setting('mobile', true);
+}
+
+$email = '';
+if (!empty($PAGE->theme->settings->mail)) {
+    $email = theme_user1st_get_setting('mail', true);
+}
+
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $regionmainsettingsmenu = $OUTPUT->region_main_settings_menu();
 $templatecontext = [
@@ -61,7 +88,11 @@ $templatecontext = [
     'draweropenright' => $draweropenright,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,
     'hasregionmainsettingsmenu' => !empty($regionmainsettingsmenu),
-    'is_siteadmin' => is_siteadmin()
+    'is_siteadmin' => is_siteadmin(),
+    'printdashboardwelcome' => $printdashboardwelcome,
+    'dashboardwelcome' => $dashboardwelcome,
+    'phone' => $phone,
+    'email' => $email
 ];
 
 if (is_siteadmin()) {
