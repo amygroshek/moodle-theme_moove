@@ -80,7 +80,11 @@
                     {{#hasregionmainsettingsmenu}}
                         <div class="region_main_settings_menu_proxy"></div>
                     {{/hasregionmainsettingsmenu}}
-                    <div class="testing">this is a test!<div>
+                    {{#printavailcoursewelcome}}
+                        <div class="container-fluid">
+                            <div class="testing">availcoursewelcome<div>
+                        </div>
+                    {{/printavailcoursewelcome}}
                     {{{ output.course_content_header }}}
                     {{{ output.main_content }}}
                     {{{ output.course_content_footer }}}

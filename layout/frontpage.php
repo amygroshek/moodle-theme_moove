@@ -82,6 +82,11 @@ if (isloggedin()) {
         $shoulddisplaymarketing = true;
     }
 
+    $printavailcoursewelcome = '';
+    if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
+        $printavailcoursewelcome = true; // theme_user1st_get_setting('avail_courses_welcome', true);
+    }
+
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
         $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
@@ -95,6 +100,8 @@ if (isloggedin()) {
         'bannerheading' => $bannerheading,
         'bannercontent' => $bannercontent,
         'shoulddisplaymarketing' => $shoulddisplaymarketing,
+        'availcoursewelcome' => $availcoursewelcome,
+        'printavailcoursewelcome' => $printavailcoursewelcome
     ];
 
     $templatecontext = array_merge($templatecontext, theme_user1st_get_marketing_items());
