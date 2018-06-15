@@ -224,6 +224,7 @@ class course_renderer extends \core_course_renderer {
         $content = $this->get_course_summary_image($course);
 
         $content .= html_writer::start_tag('div', array('class' => 'card-block'));
+        $content .= 'testytestytest !!!! ';
         $content .= "<h4 class='card-title'>". $coursenamelink ."</h4>";
 
         // Display course summary.
