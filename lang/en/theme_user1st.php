@@ -34,6 +34,7 @@ $string['currentinparentheses'] = '(current)';
 $string['configtitle'] = 'User1st';
 $string['dashboard_welcome_title'] = 'Dashboard Welcome';
 $string['dashboard_welcome_desc'] = 'Enter welcome or informational text to be displayed at the top of the dashboard page. To add a user first or last name, use "{{userfirst}}" and "{{userlast}}".';
+$string['frontpagewelcome'] = 'Welcome,';
 $string['generalsettings'] = 'General settings';
 $string['pluginname'] = 'User1st';
 $string['presetfiles'] = 'Additional theme preset files';
