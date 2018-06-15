@@ -84,13 +84,13 @@ if (isloggedin()) {
 
     $printavailcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
-        $printavailcoursewelcome = true; // theme_user1st_get_setting('avail_courses_welcome', true);
-        echo '$printavailcoursewelcome = '.$printavailcoursewelcome;
+        $printavailcoursewelcome = true;
+        // echo '$printavailcoursewelcome = '.$printavailcoursewelcome;
     }
 
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
-        echo '$availcoursewelcome = '.$availcoursewelcome;
+        // echo '$availcoursewelcome = '.$availcoursewelcome;
         $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
     }
 
