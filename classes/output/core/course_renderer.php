@@ -200,6 +200,21 @@ class course_renderer extends \core_course_renderer {
     }
 
     /**
+     * Limit text in course descriptions (for use on front page)
+     * @param  String $text  String for which to reduce count
+     * @param  Float $limit  Max word count
+     * @return String        Return string with reduced word count
+     */
+    public function limit_text($text, $limit) {
+        if (str_word_count($text, 0) > $limit) {
+            $words = str_word_count($text, 2);
+            $pos = array_keys($words);
+            $text = '<p>'.substr($text, 0, $pos[$limit]).'...</p>';
+        }
+        return $text;
+    }
+
+    /**
      * Returns HTML to display course content (summary, course contacts and optionally category name)
      *
      * This method is called from coursecat_coursebox() and may be re-used in AJAX
@@ -229,8 +244,10 @@ class course_renderer extends \core_course_renderer {
         // Display course summary.
         if ($course->has_summary()) {
             $content .= html_writer::start_tag('div', array('class' => 'card-text'));
-            $content .= $chelper->get_course_formatted_summary($course,
+            $summary = $chelper->get_course_formatted_summary($course,
                     array('overflowdiv' => false, 'noclean' => true, 'para' => false));
+            $summary = strip_tags($summary);
+            $content .= limit_text($summary, 150);
             $content .= html_writer::end_tag('div'); // End summary.
         }
 
