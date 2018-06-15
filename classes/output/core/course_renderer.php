@@ -247,7 +247,7 @@ class course_renderer extends \core_course_renderer {
             $summary = $chelper->get_course_formatted_summary($course,
                     array('overflowdiv' => false, 'noclean' => true, 'para' => false));
             // $summary = strip_tags($summary);
-            $content .= course_renderer::limit_text($summary, 150);
+            $content .= course_renderer::limit_text($summary, 50);
             $content .= html_writer::end_tag('div'); // End summary.
         }
 
