@@ -204,16 +204,22 @@
 }
 
 .pagelayout-frontpage {
+    .card.coursebox {
+        height: 550px;
+    }
+
     .card-block-info {
         padding-bottom: 0;
     }
 
     .card-block-actions {
         padding-top: 0;
+        position: relative;
+        bottom: 1.25rem;
     }
 
     .card-text {
-        min-height: 205px;
+        min-height: 180px;
     }
 }
 
