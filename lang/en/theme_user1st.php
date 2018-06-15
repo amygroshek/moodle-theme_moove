@@ -25,11 +25,15 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['advancedsettings'] = 'Advanced settings';
+$string['avail_courses_welcome_title'] = 'Available Courses Welcome';
+$string['avail_courses_welcome_desc'] = 'Enter welcome or informational text to be displayed at the top of the available courses list.';
 $string['brandcolor'] = 'Brand colour';
 $string['brandcolor_desc'] = 'The accent colour.';
 $string['choosereadme'] = 'User1st is a modern highly-customisable theme based on Moove. This theme is intended to be used directly, or as a parent theme when creating new themes utilising Bootstrap 4.';
 $string['currentinparentheses'] = '(current)';
 $string['configtitle'] = 'User1st';
+$string['Dashboard_welcome_title'] = 'Dashboard Welcome';
+$string['avail_courses_welcome_desc'] = 'Enter welcome or informational text to be displayed at the top of the dashboard page.';
 $string['generalsettings'] = 'General settings';
 $string['pluginname'] = 'User1st';
 $string['presetfiles'] = 'Additional theme preset files';

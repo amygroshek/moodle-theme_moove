@@ -146,6 +146,24 @@ if ($ADMIN->fulltree) {
     $setting->set_updatedcallback('theme_reset_all_caches');
     $page->add($setting);
 
+    // Loggedin welcome text.
+    $name = 'theme_user1st/avail_courses_welcome';
+    $title = get_string('avail_courses_welcome_title', 'theme_user1st');
+    $description = get_string('avail_courses_welcome_desc', 'theme_user1st');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
+    // Dashboard welcome text.
+    $name = 'theme_user1st/dashboard_welcome';
+    $title = get_string('dashboard_welcome_title', 'theme_user1st');
+    $description = get_string('dashboard_welcome_desc', 'theme_user1st');
+    $default = '';
+    $setting = new admin_setting_configtextarea($name, $title, $description, $default);
+    $setting->set_updatedcallback('theme_reset_all_caches');
+    $page->add($setting);
+
     $name = 'theme_user1st/displaymarketingbox';
     $title = get_string('displaymarketingbox', 'theme_user1st');
     $description = get_string('displaymarketingboxdesc', 'theme_user1st');

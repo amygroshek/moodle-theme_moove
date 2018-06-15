@@ -82,6 +82,11 @@ if (isloggedin()) {
         $shoulddisplaymarketing = true;
     }
 
+    $availcoursewelcome = '';
+    if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
+        $availcoursewelcome = theme_user1st_get_setting('avail_courses_welcome', true);
+    }
+
     $templatecontext = [
         'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
         'output' => $OUTPUT,
