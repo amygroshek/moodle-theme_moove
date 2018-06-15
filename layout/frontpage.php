@@ -103,11 +103,7 @@ if (isloggedin()) {
     $printavailcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
         $printavailcoursewelcome = true;
-        // echo '$printavailcoursewelcome = '.$printavailcoursewelcome;
     }
-
-    $welcome_header = get_string('frontpagewelcome', 'theme_user1st').' '.$user->firstname.'!';
-    $availcoursewelcome = html_writer::tag('h2', $welcome_header, array('class' => 'front-avail-welcome use1st-welcome'));
 
     $availcoursewelcome = '';
     if (!empty($PAGE->theme->settings->avail_courses_welcome)) {
