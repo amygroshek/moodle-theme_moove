@@ -199,10 +199,6 @@
     }
 }
 
-.pagelayout-frontpage .generalbox.sitetopic {
-    margin: 3.5rem 2rem 0;
-}
-
 .pagelayout-frontpage {
     .card.coursebox {
         height: 550px;
@@ -226,6 +222,19 @@
     .card-text {
         min-height: 180px;
     }
+}
+
+/* Hide front page pages/activities */
+.pagelayout-frontpage .box.generalbox.sitetopic.p-y-1 {
+    height: 0;
+    padding: 0;
+    margin: 0;
+}
+/* Show front page activities when editing is on */
+.pagelayout-frontpage.editing .box.generalbox.sitetopic.p-y-1 {
+    display: block;
+    margin: 1rem 2rem 0;
+    padding: 1rem 0 1rem 0 !important;
 }
 
 #frontpage-course-list {
