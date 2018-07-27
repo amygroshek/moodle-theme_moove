@@ -33,7 +33,7 @@ $plugin->requires = 2016112900;
 
 // This is the component name of the plugin - it always starts with 'theme_'
 // for themes and should be the same as the name of the folder.
-$plugin->component = 'theme_moove';
+$plugin->component = 'theme_user1st';
 
 // This is the named version.
 $plugin->release = '1.4.8';
